@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.dishes.model.Comments;
 import com.bigrestaurant.system.dishes.model.Dishes;
-import com.bigrestaurant.system.dishes.repo.FacadeRepositry;
 import com.bigrestaurant.system.operations.MongoOperations;
+import com.bigrestaurant.system.repositories.FacadeRepositry;
 
 /**
  * @author anas abu hussein

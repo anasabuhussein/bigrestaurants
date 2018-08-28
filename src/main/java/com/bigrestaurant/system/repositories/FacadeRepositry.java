@@ -1,10 +1,22 @@
-package com.bigrestaurant.system.dishes.repo;
+package com.bigrestaurant.system.repositories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
+import com.bigrestaurant.system.dishes.repo.DeliverManRepo;
+import com.bigrestaurant.system.dishes.repo.DishesRepo;
+import com.bigrestaurant.system.dishes.repo.ImpSpicealMongoRepositoryOperations;
+import com.bigrestaurant.system.dishes.repo.UserRepo;
 import com.bigrestaurant.system.restaurant.repo.RestaurantRepo;
+
+/**
+ * <h1>Description</h1> <br>
+ * - this class collect all repositories in system and provide it in one class.
+ * 
+ * @author Anas Abu Hussein
+ * @since 28/8/2018
+ **/
 
 @Component
 public class FacadeRepositry {

@@ -8,8 +8,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.dishes.model.User;
-import com.bigrestaurant.system.dishes.repo.FacadeRepositry;
 import com.bigrestaurant.system.operations.MongoOperations;
+import com.bigrestaurant.system.repositories.FacadeRepositry;
 
 @Service
 @Order(2)

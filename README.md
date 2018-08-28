@@ -3,7 +3,7 @@ It is provide food services for many things like restaurants and mall and dishes
 
 ## endpoints
 	* dishes : 
-		* dishes : GET	
+	  * dishes : GET	
 		  * /api/v1/dishes
 		  * /api/v1/dishes/{id}
 		  * api/v1/dishes/name/{name}

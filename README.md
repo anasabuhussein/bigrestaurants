@@ -2,7 +2,7 @@
 It is provide food services for many things like restaurants and mall and dishes and make relations between them for make user satisfied.
 
 ## endpoints
-	* dishes : 
+	* Dishes : 
 	  * dishes : GET	
 		 * /api/v1/dishes
 		 * /api/v1/dishes/{id}
@@ -18,15 +18,15 @@ It is provide food services for many things like restaurants and mall and dishes
 	    * /api/v1/dishes/{id}/comments
 	    
 	* Users : 
-	  * Users : GET
+	  * users : GET
 	    * /api/v1/users
 	    * /api/v1/users/{id}
 	    * /api/v1/users/name/{name}
 	    
-	  * Users : POST
+	  * users : POST
 	    * /api/v1/users
 	    
-	  * Users : PUT, DELETE
+	  * users : PUT, DELETE
 	    * /api/v1/users/{id}
 	   
 			

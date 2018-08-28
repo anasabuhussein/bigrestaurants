@@ -1,21 +1,2 @@
 {
-	"type": "service_account",
-	"project_id": "bigrestaurant-br",
-	"private_key_id": "d456b5570ed27aba0204639360b3621d2113d817",
-	"private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC598uii1TpHby+\ntfU8WuwWxGSBwNUqhYFk+5su2rKTgIftOLi3J3WV6kE7PyB53tWX+oshg8I222tr\nE6n7B2KAoMB69Fa9+vjMKfUfG85jexaJO3eVNLIq5unT1O7wUljHH8VLlK0oGnZz\nR4TwecnyaFF5wBLqzmtDRSqCVDgcz94Ft1ZiN2IuJe+8clMvWwHxUpdphlwwy6xb\namknCcMTL/dWXbTN/klsu0EBheOCubBHd+j5KTo1qnsXdGQ/ikfrG2bDhW6SFl75\niSTPV3vqlMTE/v2xJYIPu0TKIZIulgWbZzIIEwUFtEML3yM2Wa8GYgrN+iJbZ2c5\nLfoMTYydAgMBAAECggEACyRQBISRiUf5U3nGYB/YbkLE/MsnWl1WU80JTqTWtySn\nwCw6UOrhziITV2/gS7zwkiL2LANfYvcBeBBdCke2fJtk/Njfy5EaT+0hnQQG+Qna\nX017TCq0lAJytvjWefqNDB0Yrn8RYso3F5AM5HV/hnD+lKtP1taYMZcWxWkzVXJ6\nitaYhWnTcfSbVEeucj6Pf6NRcl1UYe/XNsvC/8nScneKFh1GDqkyrMjMc2ilOQ8m\nYmOar3bFK5AfaI0iAVr9+f5IWP79GxN89tFamKa/LORzdDwfXhT1TZYaJY6aMsM1\nE2uNNtorqT43yH0kuDY6BEmrHcBBhn8QssCSQtIJlwKBgQDvNa+XXN/fj6RlzH1I\nuMpaRVvWbjE0/uVIcLwyh62qz/ZZM8w6aKkd7ZaVa6NhZd8mHFVFunwboaEKh9fl\n/Dw7zMnqqfw46BsiKwwQmTY9p6p4vcYdwwkiCRKFbi3dK8oAN2DEAmthzrEq6ac+\n5vT7MWVwsbZq3/xIjcaBK8EFuwKBgQDHBWsd+y5QdqqpAvYzHnMSY1AJeFTw/3zC\nej+FP39qr8fX/P2hY3U5tgJUAtMMOKs+A8GmmRvZerA3085EqUZVE3IoyobSwR7d\nmPkO/sl3IziDE2jBiNZLdACehYg2JPeEx4JMF8E6FrbgRzC9M2Tyx5vraubS+q3W\nWCD1rFalhwKBgQCO8Ou+bTcyJmm8kxeCbzor+ypH1oz8+BwWz5cGMuFqIt84qqUt\negEk6yaCn1GAEBnqch/ajPdAo7LR0h8HRVTQ/yzhVzZq4vfj0Qlimcs5yIkroWtT\nuYoplnZE2XP6qAILYwwl1LRKO/LOi9Tu16Aownm1f9xbvQDKcj3eTkEHpQKBgEQH\npB/xdllm1ttC+elrZSZJ8FfsXAytKHZJ12Cy3dkYERXRktkR6EY74vvYo0+wJ0jh\ne9Z4y75BY+8RZZauzi3SodkzsXZlMSnKWog3q6If1fdoMQzGu4m7M2L8fh0T8c/f\narib/h7fGM/9RbnG0aDzfmawegpwSe/U3B9eM5gNAoGBALLyuLXEQZ/wFwlPm6CO\nLcxgqo0qHjC6+00qAnhfqHEzbNkMgReYCnN9uRnarwlpuzqjm/2kXp0mM51nxUvT\nTjim0mdhE+GiSn9WrDI7omUdjQzZqVPiPXsnzBJkv85yKPq5bYpV4JSsjhSV0dOb\nt+/5yltyUFwlvl5qFWhATEQj\n-----END PRIVATE KEY-----\n",
-	"client_email": "service-test@bigrestaurant-br.iam.gserviceaccount.com",
-	"client_id": "113244196310104646909",
-	"auth_uri": "https://accounts.google.com/o/oauth2/auth",
-	"token_uri": "https://oauth2.googleapis.com/token",
-	"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-	"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-test%40bigrestaurant-br.iam.gserviceaccount.com",
-	
-	
-	
-	"apiKey": "AIzaSyDn--J7pzXP0XROzGaXTwoSHyVbE6QtbTk",
-	"authDomain": "bigrestaurant-br.firebaseapp.com",
-	"databaseURL": "https://bigrestaurant-br.firebaseio.com",
-	"projectId": "bigrestaurant-br",
-	"storageBucket": "bigrestaurant-br.appspot.com",
-	"messagingSenderId": "705013619908"
 }

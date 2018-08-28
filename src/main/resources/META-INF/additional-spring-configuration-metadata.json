@@ -1,0 +1,82 @@
+{"properties": [
+  {
+    "name": "primary.mongodb.password",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.password'"
+  },
+  {
+    "name": "primary.mongodb.database",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.database'"
+  },
+  {
+    "name": "primary.mongodb.port",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.port'"
+  },
+  {
+    "name": "primary.mongodb.host",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.host'"
+  },
+  {
+    "name": "primary.mongodb.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.uri'"
+  },
+  {
+    "name": "primary.mongodb.username",
+    "type": "java.lang.String",
+    "description": "A description for 'primary.mongodb.username'"
+  },
+  {
+    "name": "UserRepo.(class)",
+    "type": "java.lang.String",
+    "description": "A description for 'UserRepo.(class)'"
+  },
+  {
+    "name": "UserRepo.(class)",
+    "type": "java.lang.String",
+    "description": "A description for 'UserRepo.(class)'"
+  },
+  {
+    "name": "UserRepo.(class)",
+    "type": "java.lang.String",
+    "description": "A description for 'UserRepo.(class)'"
+  },
+  {
+    "name": "UserRepo.(class)",
+    "type": "java.lang.String",
+    "description": "A description for 'UserRepo.(class)'"
+  },
+  {
+    "name": "secundry.mongodb.port",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.port'"
+  },
+  {
+    "name": "secundry.mongodb.database",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.database'"
+  },
+  {
+    "name": "secundry.mongodb.host",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.host'"
+  },
+  {
+    "name": "secundry.mongodb.password",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.password'"
+  },
+  {
+    "name": "secundry.mongodb.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.uri'"
+  },
+  {
+    "name": "secundry.mongodb.username",
+    "type": "java.lang.String",
+    "description": "A description for 'secundry.mongodb.username'"
+  }
+]}

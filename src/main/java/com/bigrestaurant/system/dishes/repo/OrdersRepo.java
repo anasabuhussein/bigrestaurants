@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.bigrestaurant.system.dishes.model.Orders;
 
-public interface OrdersRepo extends MongoRepository<Orders, UUID>{
+public interface OrdersRepo extends MongoRepository<Orders, UUID> {
 
 }

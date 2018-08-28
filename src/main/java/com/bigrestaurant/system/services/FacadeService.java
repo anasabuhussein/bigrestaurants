@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import com.bigrestaurant.system.dishes.service.DishesService;
 import com.bigrestaurant.system.dishes.service.OredreService;
 import com.bigrestaurant.system.dishes.service.UserService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * <h1>Description</h1> <br>
@@ -22,9 +21,6 @@ public class FacadeService {
 	private DishesService dishesService;
 
 	@Autowired
-	private ObjectMapper objectMapper;
-
-	@Autowired
 	private OredreService oredreService;
 
 	@Autowired
@@ -36,10 +32,6 @@ public class FacadeService {
 
 	public DishesService getDishesService() {
 		return dishesService;
-	}
-
-	public ObjectMapper getObjectMapper() {
-		return objectMapper;
 	}
 
 	public OredreService getOredreService() {

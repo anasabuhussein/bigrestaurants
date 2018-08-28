@@ -1,81 +1,71 @@
 package com.bigrestaurant.system.dishes.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.dishes.model.Orders;
-import com.bigrestaurant.system.dishes.repo.DishesRepo;
-import com.bigrestaurant.system.dishes.repo.OrdersRepo;
-import com.bigrestaurant.system.dishes.repo.UserRepo;
+import com.bigrestaurant.system.operations.MongoOperations;
+import com.bigrestaurant.system.repositories.FacadeRepositry;
 
 @Service
 @Order(3)
-@SuppressWarnings("unused")
-public class OredreService implements CommandLineRunner {
+public class OredreService implements MongoOperations<Orders> {
 
-//	@Autowired
-//	private DishesRepo dishesRepo;
-//
-//	@Autowired
-//	private OrdersRepo userDishesTransactionRepo;
-//
-//	@Autowired
-//	private UserRepo userRepo;
+	@Autowired
+	private FacadeRepositry facadeRepositry;
 
 	@Override
-	public void run(String... args) throws Exception {
-
-//		for (int i = 0; i < 20000; i++) {
-//			Optional<User> user = userRepo.findById((long) 1);
-//			Dishes di = dishesRepo.findAll().get(0);
-//
-//			Set<Dishes> dis = new HashSet<>();
-//
-//			di.setAdditonalComponent(null);
-//			di.setRating(new RatingOperations());
-//
-//			Orders udt = new Orders(user.get(), dis);
-//			udt.setUserRating(5);
-//
-//			long totalRating = di.getRating().getTotalRating() + udt.getUserRating();
-//			long totalUser = di.getRating().getTotalUserRate() + 1;
-//
-//			di.getRating().setTotalRating(totalRating);
-//			di.getRating().setTotalUserRate(totalUser);
-//
-//			dishesRepo.save(di);
-//			dis.add(di);
-//
-//			userDishesTransactionRepo.save(udt);
-//
-//			List<String> l = new ArrayList<>();
-//			l.add("anas");
-//			l.add("bassam");
-//
-//			Orders udt2 = new Orders(user.get(), dis);
-//
-//			udt2.setUserRating(10);
-//
-//			totalRating = di.getRating().getTotalRating() + udt2.getUserRating();
-//			totalUser = di.getRating().getTotalUserRate() + 1;
-//
-//			di.getRating().setTotalRating(totalRating);
-//			di.getRating().setTotalUserRate(totalUser);
-//
-//			dishesRepo.save(di);
-//
-//			di.setAdditonalComponent(l);
-//			userDishesTransactionRepo.save(udt2);
-//		}
+	public List<Orders> findAll() {
+		return facadeRepositry.getOrdersOfDishesRepo().findAll();
 	}
 
-	public List<Orders> getUserDishesTransactionRepo() {
-//		return userDishesTransactionRepo.findAll();
+	@Override
+	public <K> Orders findById(K object) {
+		Optional<Orders> orders = facadeRepositry.getOrdersOfDishesRepo().findById((UUID) object);
+		if (orders.isPresent())
+			return orders.get();
+
 		return null;
+	}
+
+	@Override
+	public Orders findByObject(Orders object) {
+		return null;
+	}
+
+	@Override
+	public Orders save(Orders object) {
+		return facadeRepositry.getOrdersOfDishesRepo().save(object);
+	}
+
+	@Override
+	public <G> Orders update(Orders object, G g) {
+		return null;
+	}
+
+	@Override
+	public void delete(Orders object) {
+		facadeRepositry.getOrdersOfDishesRepo().delete(object);
+	}
+
+	@Override
+	public <G> Orders findByEmbeddedObject(G m) {
+		return null;
+	}
+
+	@Override
+	public <G> List<Orders> findAllByEmbeddedObject(G m) {
+		return null;
+	}
+
+	@Override
+	public boolean iterator(Orders t) {
+		return false;
 	}
 
 }

@@ -1,0 +1,26 @@
+/**************************************/
+		for orders service class
+		
+		@Override
+	public void run(String... args) throws Exception {
+
+		User user = new User("55", "anas abu hussein", "pic.png", "lala@hotmail.com", "0787526301",
+				new Coordinates(54.225, 2.1144));
+
+		List<String> x = new ArrayList<>();
+		x.add("salt");
+		x.add("meat");
+
+		Dishes dishes = new Dishes("burger", null, "burger.png", x, null);
+		dishes.setRestaurantName("jordan Man");
+
+		Set<Dishes> set = new HashSet<>();
+		set.add(dishes);
+
+		Orders orders = new Orders(user, set);
+
+		facadeRepositry.getOrdersOfDishesRepo().save(orders);
+
+	}
+	
+/**************************************/

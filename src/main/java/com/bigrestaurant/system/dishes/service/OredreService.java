@@ -6,11 +6,14 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.dishes.model.Orders;
 import com.bigrestaurant.system.operations.MongoOperations;
 import com.bigrestaurant.system.repositories.FacadeRepositry;
+import com.bigrestaurant.system.restaurant.modal.Restaurant;
 
 @Service
 @Order(3)
@@ -59,7 +62,16 @@ public class OredreService implements MongoOperations<Orders> {
 	}
 
 	@Override
-	public <G> List<Orders> findAllByEmbeddedObject(G m) {
+	public <G> List<Orders> findAllByEmbeddedObject(G name) {
+
+		// get restaurant from database by name.
+		Restaurant restaurant = facadeRepositry.getRestaurantRepo().findByRestName((String) name);
+		if (restaurant != null) {
+			Query query = new Query();
+			query.addCriteria(Criteria.where("dishes.restaurantName").all(restaurant.getRestName()));
+			return facadeRepositry.getMongoTemplate().find(query, Orders.class);
+		}
+
 		return null;
 	}
 

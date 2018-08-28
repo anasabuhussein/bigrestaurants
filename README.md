@@ -28,5 +28,18 @@ It is provide food services for many things like restaurants and mall and dishes
 	    
 	  * users : PUT, DELETE
 	    * /api/v1/users/{id}
+	    
+	* Orders of Dishes : 
+	  * orders : GET
+	    * /api/v1/dishes/orders
+	    * /api/v1/dishes/orders/{id}
+	    * /api/v1/dishes/orders/restaurant/{name}
+	    
+	  * orders : POST
+	    *
+	  * orders : PUT
+	    *
+	  * orders : DELETE
+	    *
 	   
 			

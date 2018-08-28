@@ -1,6 +1,7 @@
 package com.bigrestaurant.system.dishes.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,29 +39,29 @@ public class OrdersController implements GeneralControllerPath {
 
 	/**
 	 * Type : Get method.<br>
-	 * Activity : To find all users in system.
+	 * Activity : To find all orders of dishes in system.
 	 * 
-	 * @return ResponseEntity List<User>
+	 * @return ResponseEntity List<Orders>
 	 */
-	@GetMapping(value = "/users", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(value = "/dishes/orders", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<List<Orders>> getAllUsers() {
 		return new ResponseEntity<>(facadeService.getOredreService().findAll(), HttpStatus.OK);
 	}
 
 	/**
 	 * Type : Get method.<br>
-	 * Activity : Find user by id in system.
+	 * Activity : Find orders by id in system.
 	 * 
-	 * @param id String
-	 * @return ResponseEntity User
+	 * @param id UUID
+	 * @return ResponseEntity Order
 	 */
-	@GetMapping(value = "/users/{id}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
+	@GetMapping(value = "/dishes/orders/{id}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<?> getUserByID(@PathVariable("id") String id) {
+	public ResponseEntity<?> getUserByID(@PathVariable("id") UUID id) {
 
-		User user = facadeService.getUserService().findById(id);
-		if (user != null)
-			return new ResponseEntity<>(user, HttpStatus.OK);
+		Orders orders = facadeService.getOredreService().findById(id);
+		if (orders != null)
+			return new ResponseEntity<>(orders, HttpStatus.OK);
 
 		return new ResponseEntity<>(new ServerMessage(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND.name(),
 				"the object not exist in database."), HttpStatus.NOT_FOUND);
@@ -68,12 +69,12 @@ public class OrdersController implements GeneralControllerPath {
 
 	/**
 	 * Type : Get method.<br>
-	 * Activity : Find user by name in system.
+	 * Activity : Find orders by name of restaurant in system.
 	 * 
 	 * @param name String
 	 * @return ResponseEntity User
 	 */
-	@GetMapping(value = "/users/name/{name}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
+	@GetMapping(value = "/dishes/orders/restaurant/{name}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> getUserByName(@PathVariable("name") String name) {
 

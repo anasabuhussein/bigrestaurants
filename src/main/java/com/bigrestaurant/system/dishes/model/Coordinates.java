@@ -5,6 +5,10 @@ public class Coordinates {
 	private double x;
 	private double y;
 
+	public Coordinates() {
+		super();
+	}
+
 	public Coordinates(double x, double y) {
 		super();
 		this.x = x;

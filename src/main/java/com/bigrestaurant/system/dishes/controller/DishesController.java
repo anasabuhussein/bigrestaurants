@@ -279,8 +279,8 @@ public class DishesController implements GeneralControllerPath {
 			if (name != null)
 				dishes = services.getDishesService().findByName(name);
 
-			if (id == null || name == null)
-				throw new ServerExciption();
+//			if (id == null || name == null)
+//				throw new ServerExciption();
 
 			services.getDishesService().delete(dishes);
 

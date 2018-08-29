@@ -2,17 +2,17 @@
 It is provide food services for many things like restaurants and mall and dishes and make relations between them for make user satisfied.
 
 ## Content
-- [Description](https://github.com/anasabuhussein/bigrestaurants#Description)
+- [Description](https://github.com/anasabuhussein/bigrestaurants#description)
 
-- [Project Tools](https://github.com/anasabuhussein/bigrestaurants#ProjectTools)
+- [Project Tools](https://github.com/anasabuhussein/bigrestaurants#project-tools)
 
-- [Project Componenets](https://github.com/anasabuhussein/bigrestaurants#ProjectComponenets)
+- [Project Componenets](https://github.com/anasabuhussein/bigrestaurants#project-componenets)
 
-- [Uses](https://github.com/anasabuhussein/bigrestaurants#Uses)
+- [Uses](https://github.com/anasabuhussein/bigrestaurants#uses)
 
-- [Endpoints](https://github.com/anasabuhussein/bigrestaurants#Endpoints)
+- [Endpoints](https://github.com/anasabuhussein/bigrestaurants#endpoints)
 
-- [Auther](https://github.com/anasabuhussein/bigrestaurants#Auther)
+- [Auther](https://github.com/anasabuhussein/bigrestaurants#auther)
 
 ### Description
 >This project provide api service (Json and xml) for multi restaurants want to show them dishes and users orders this dishes; can user orders (Ingredients of the dish) from malls; The user can orders the (ingredients of the dish) from mall; the project provide location of user; the project shall provide follow path of delivery man.

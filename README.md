@@ -83,13 +83,7 @@ and add it to project and endpoints.
 	    * /api/v1/dishes/orders/{id}/restaurant/{name}
 	    
 ### Pic
-![0](https://i.imgur.com/0oTvOM0.png)
-![1](https://imgur.com/q5NXDda.png)
-![2](https://imgur.com/qDRtfqO.png)
-![3](https://imgur.com/uk1qsPb.png)
-![4](https://imgur.com/jmLoB89.png)
-![5](https://imgur.com/CoJWeG4.png)
-![6](https://imgur.com/xqvX44u.png)
+
 
 > For all images please visit below imgur links,  
 **[imgur](https://imgur.com/a/AiVHJrW)**

@@ -30,7 +30,7 @@ It is provide food services for many things like restaurants and mall and dishes
 	- Orders For Malls
 	
 ### Uses 
->The poject can use by phone platforms or web platform for access to this services; and useing to increase user  of restaurants and malls and provide best service from them and make user are satisfied.
+>The poject can use by phone platforms or web platform for access to this services; and use to increase user  of restaurants and malls and provide best service from them and make user are satisfied.
 
 ### Endpoints
 	* Dishes : 

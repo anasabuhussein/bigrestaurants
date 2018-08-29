@@ -10,6 +10,8 @@ It is provide food services for many things like restaurants and mall and dishes
 
 - [Uses](https://github.com/anasabuhussein/bigrestaurants#uses)
 
+- [Future Work](https://github.com/anasabuhussein/bigrestaurants#future-work)
+
 - [Endpoints](https://github.com/anasabuhussein/bigrestaurants#endpoints)
 
 - [Auther](https://github.com/anasabuhussein/bigrestaurants#auther)
@@ -31,6 +33,10 @@ It is provide food services for many things like restaurants and mall and dishes
 	
 ### Uses 
 >The poject can use by phone platforms or web platform for access to this services; and use to increase user  of restaurants and malls and provide best service from them and make user are satisfied.
+
+### Future Work
+> Make project support malls api service and delivery man service.
+and add it to project and endpoints.
 
 ### Endpoints
 	* Dishes : 

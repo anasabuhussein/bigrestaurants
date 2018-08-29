@@ -72,9 +72,13 @@ public class Orders implements GeneralModel {
 	@JsonProperty("delever")
 	private boolean delever;
 
+	@Field("done")
+	@JsonProperty("done")
+	private boolean done;
+
 	@Field(value = "orderDate")
 	@JsonProperty("orderDate")
-	private final OrderDate date;
+	private OrderDate date;
 
 	@PersistenceConstructor
 	public Orders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes) {
@@ -151,6 +155,22 @@ public class Orders implements GeneralModel {
 
 	public Set<Dishes> getDishes() {
 		return dishes;
+	}
+
+	public boolean isDone() {
+		return done;
+	}
+
+	public void setDone(boolean done) {
+		this.done = done;
+	}
+
+	public OrderDate getDate() {
+		return date;
+	}
+
+	public void setDate(OrderDate date) {
+		this.date = date;
 	}
 
 	@Override

@@ -84,7 +84,7 @@ public interface MongoOperations<T> {
 	 * @see com.api.restaurant.model.DeliverMan
 	 * 
 	 **/
-	public <G> List<T> findAllByEmbeddedObject(G m);
+	public <G> List<?> findAllByEmbeddedObject(G m);
 	
 	public boolean iterator(T t) ;
 	

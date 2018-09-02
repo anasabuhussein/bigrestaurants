@@ -72,26 +72,36 @@ and add it to project and endpoints.
 	  * orders : GET
 	    * /api/v1/dishes/orders
 	    * /api/v1/dishes/orders/{id}
-	    * /api/v1/dishes/orders/restaurant/{name}
+	    * /api/v1/dishes/orders/restaurant/name/{name}
 	    
 	  * orders : POST
 	    * /api/v1/dishes/orders
-	    * /api/v1/dishes/orders/restaurant/{name}
+	    * /api/v1/dishes/orders/restaurant/name/{name}
 	    
 	  * orders : PUT, DELETE
 	  	 * /api/v1/dishes/orders/{id}
-	    * /api/v1/dishes/orders/{id}/restaurant/{name}
+	    * /api/v1/dishes/orders/restaurant/name/{name}
+	    
+	* Restaurants
+	  * Restaurants : GET
+	    * /api/v1/restaurants
+	    * /api/v1/restaurants/{id}
+	    * /api/v1/restaurants/name/{name}
+	    * /api/v1/restaurants/{id}/dishes
+	    
+	  * Restaurants : POST
+	    * /api/v1/restaurants
+	    
+	  * Restaurants : PUT, DELETE
+	    * /api/v1/restaurants/{id}
+	    * /api/v1/restaurants/name/{name}
+	    * /restaurants/{id}/dishes/{dishesid}
+	    
 	    
 ### Pic
-![0](https://i.imgur.com/0oTvOM0.png)
-![1](https://imgur.com/q5NXDda.png)
-![2](https://imgur.com/qDRtfqO.png)
-![3](https://imgur.com/uk1qsPb.png)
-![4](https://imgur.com/jmLoB89.png)
-![5](https://imgur.com/CoJWeG4.png)
-![6](https://imgur.com/xqvX44u.png)
 
-> For all images please visit below imgur links. 
+
+> For all images please visit below imgur links,  
 **[imgur](https://imgur.com/a/AiVHJrW)**
 
 	    

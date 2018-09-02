@@ -1,9 +1,10 @@
-package com.bigrestaurant.system.dishes.model;
+package com.bigrestaurant.system.modal;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Transient;
 
+import com.bigrestaurant.system.dishes.model.HATEOAS;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**

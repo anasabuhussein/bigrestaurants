@@ -73,7 +73,7 @@ public class OrdersController implements GeneralControllerPath {
 	 * @param name String
 	 * @return ResponseEntity User
 	 */
-	@GetMapping(value = "/dishes/orders/restaurant/{name}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
+	@GetMapping(value = "/dishes/orders/restaurant/name/{name}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> findOredersByRestaurantName(@PathVariable("name") String name) {
 
@@ -95,7 +95,7 @@ public class OrdersController implements GeneralControllerPath {
 	 * ***********************************************************************
 	 **/
 
-	@PostMapping(value = { "/dishes/orders", "/dishes/orders/restaurant/{name}" }, produces = {
+	@PostMapping(value = { "/dishes/orders", "/dishes/orders/restaurant/name/{name}" }, produces = {
 			MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = {
 					MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> setNewOrders(@RequestBody Orders orders, @PathVariable("name") String name) {
@@ -127,7 +127,7 @@ public class OrdersController implements GeneralControllerPath {
 	 * ***********************************************************************
 	 **/
 
-	@PutMapping(value = { "/dishes/orders/{id}", "/dishes/orders/{id}/restaurant/{name}" }, produces = {
+	@PutMapping(value = { "/dishes/orders/{id}", "/dishes/orders/restaurant/name/{name}" }, produces = {
 			MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = {
 					MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> updateOrders(@RequestBody Orders orders, @PathVariable("name") String name,
@@ -151,7 +151,7 @@ public class OrdersController implements GeneralControllerPath {
 	 * ***********************************************************************
 	 **/
 
-	@DeleteMapping(value = { "/dishes/orders/{id}", "/dishes/orders/{id}/restaurant/{name}" }, produces = {
+	@DeleteMapping(value = { "/dishes/orders/{id}", "/dishes/orders/restaurant/name/{name}" }, produces = {
 			MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> deleteOrdersByID(@PathVariable("name") String name, @PathVariable("id") UUID id) {
 		try {

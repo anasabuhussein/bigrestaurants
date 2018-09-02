@@ -11,21 +11,23 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.annotation.Transient;
-import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.bigrestaurant.system.dishes.model.Coordinates;
 import com.bigrestaurant.system.dishes.model.Dishes;
+import com.bigrestaurant.system.dishes.model.HATEOAS;
 import com.bigrestaurant.system.dishes.view.View;
+import com.bigrestaurant.system.modal.GeneralModel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.uuid.Generators;
 
 @Document(collection = "restaurant")
 @JsonView(View.RestaurantView.class)
-public class Restaurant {
+public class Restaurant implements GeneralModel {
 
 	@Id
 	@JsonProperty("id")
@@ -34,7 +36,7 @@ public class Restaurant {
 	@NotEmpty
 	@NotNull
 	@Size(max = 20, min = 3)
-	@Indexed(name = "restName",unique = true)
+	@Indexed(name = "restName", unique = true)
 	@JsonProperty("restName")
 	private String restName;
 
@@ -53,12 +55,12 @@ public class Restaurant {
 	private String city;
 
 	@Transient
-	private List<Dishes> dishes = new ArrayList<Dishes>();
+	private List<Dishes> dishes = new ArrayList<>();
 
 	@NotEmpty
 	@NotNull
 	@GeoSpatialIndexed(type = GeoSpatialIndexType.GEO_2DSPHERE)
-	private GeoJsonPoint location;
+	private Coordinates location;
 
 	public Restaurant() {
 		super();
@@ -70,7 +72,7 @@ public class Restaurant {
 	@PersistenceConstructor
 	public Restaurant(@NotEmpty @NotNull @Size(max = 20, min = 3) String restName,
 			@NotEmpty @NotNull @Size(max = 20, min = 3) String country,
-			@NotEmpty @NotNull @Size(max = 20, min = 3) String city, @NotEmpty @NotNull GeoJsonPoint location) {
+			@NotEmpty @NotNull @Size(max = 20, min = 3) String city, @NotEmpty @NotNull Coordinates location) {
 		super();
 		this.id = Generators.timeBasedGenerator().generate();
 		this.restName = restName;
@@ -110,7 +112,7 @@ public class Restaurant {
 	/**
 	 * @return the location
 	 */
-	public GeoJsonPoint getLocation() {
+	public Coordinates getLocation() {
 		return location;
 	}
 
@@ -145,7 +147,7 @@ public class Restaurant {
 	/**
 	 * @param location the location to set
 	 */
-	public void setLocation(GeoJsonPoint location) {
+	public void setLocation(Coordinates location) {
 		this.location = location;
 	}
 
@@ -155,6 +157,23 @@ public class Restaurant {
 
 	public void setDishes(List<Dishes> dishes) {
 		this.dishes = dishes;
+	}
+	
+	@JsonProperty("links")
+//	@JsonView(View.DishesView.class)
+	@Transient
+	@Override
+	public List<HATEOAS> getHATEOAS() {
+		List<HATEOAS> links = new ArrayList<>();
+		String generalPath = "/api/v1/";
+
+		// get dishes by id ...
+		links.add(new HATEOAS(generalPath + "restaurant/" + getId(), "self"));
+
+		// get dishes by name ...
+		links.add(new HATEOAS(generalPath + "restaurant/name/" + getRestName(), "self"));		
+
+		return links;
 	}
 
 }

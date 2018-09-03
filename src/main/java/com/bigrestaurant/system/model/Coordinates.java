@@ -1,4 +1,4 @@
-package com.bigrestaurant.system.dishes.model;
+package com.bigrestaurant.system.model;
 
 public class Coordinates {
 

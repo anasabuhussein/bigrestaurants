@@ -16,11 +16,11 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.bigrestaurant.system.dishes.model.Coordinates;
 import com.bigrestaurant.system.dishes.model.Dishes;
-import com.bigrestaurant.system.dishes.model.HATEOAS;
-import com.bigrestaurant.system.dishes.view.View;
-import com.bigrestaurant.system.modal.GeneralModel;
+import com.bigrestaurant.system.model.Coordinates;
+import com.bigrestaurant.system.model.GeneralModel;
+import com.bigrestaurant.system.model.HATEOAS;
+import com.bigrestaurant.system.view.View;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.uuid.Generators;

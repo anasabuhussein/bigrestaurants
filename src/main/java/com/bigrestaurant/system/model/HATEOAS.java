@@ -1,8 +1,8 @@
-package com.bigrestaurant.system.dishes.model;
+package com.bigrestaurant.system.model;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
-@JsonView(com.bigrestaurant.system.dishes.view.View.DishesView.class)
+@JsonView(com.bigrestaurant.system.view.View.DishesView.class)
 public class HATEOAS {
 
 	private String href;

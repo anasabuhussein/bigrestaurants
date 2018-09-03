@@ -1,4 +1,4 @@
-package com.bigrestaurant.system.dishes.view;
+package com.bigrestaurant.system.view;
 
 public interface View {
 

@@ -27,8 +27,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bigrestaurant.system.dishes.model.Dishes;
 import com.bigrestaurant.system.dishes.model.server.message.ServerExciption;
 import com.bigrestaurant.system.dishes.model.server.message.ServerMessage;
-import com.bigrestaurant.system.dishes.view.View;
 import com.bigrestaurant.system.services.FacadeService;
+import com.bigrestaurant.system.view.View;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.uuid.Generators;
 

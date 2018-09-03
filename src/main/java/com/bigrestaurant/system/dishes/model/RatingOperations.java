@@ -1,6 +1,6 @@
 package com.bigrestaurant.system.dishes.model;
 
-import com.bigrestaurant.system.dishes.view.View;
+import com.bigrestaurant.system.view.View;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 

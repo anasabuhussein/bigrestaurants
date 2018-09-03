@@ -9,7 +9,8 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.bigrestaurant.system.modal.GeneralModel;
+import com.bigrestaurant.system.model.Coordinates;
+import com.bigrestaurant.system.model.GeneralModel;
 
 @Document(collection = "deliverman")
 public class DeliverMan extends User implements GeneralModel {

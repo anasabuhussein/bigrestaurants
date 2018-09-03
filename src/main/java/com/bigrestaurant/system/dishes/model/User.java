@@ -16,8 +16,10 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.bigrestaurant.system.dishes.view.View;
-import com.bigrestaurant.system.modal.GeneralModel;
+import com.bigrestaurant.system.model.Coordinates;
+import com.bigrestaurant.system.model.GeneralModel;
+import com.bigrestaurant.system.model.HATEOAS;
+import com.bigrestaurant.system.view.View;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

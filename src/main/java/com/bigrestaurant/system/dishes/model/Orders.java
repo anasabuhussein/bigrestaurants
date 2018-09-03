@@ -15,7 +15,8 @@ import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import com.bigrestaurant.system.modal.GeneralModel;
+import com.bigrestaurant.system.model.GeneralModel;
+import com.bigrestaurant.system.model.HATEOAS;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;

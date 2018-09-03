@@ -1,0 +1,20 @@
+{
+	"dishesID": "73bb70ca-a903-11e8-895f-dda9b7f15b31",
+	"availableDelivery": false,
+	"price": 110,
+	"countOfComments": 0,
+	"links": [
+		{
+			"href": "/api/v1/dishes/73bb70ca-a903-11e8-895f-dda9b7f15b31",
+			"rel": "self"
+		},
+		{
+			"href": "/api/v1/dishes/name/null",
+			"rel": "self"
+		},
+		{
+			"href": "/api/v1/dishes/73bb70ca-a903-11e8-895f-dda9b7f15b31/comments",
+			"rel": "comments"
+		}
+	]
+}

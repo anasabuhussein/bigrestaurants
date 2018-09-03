@@ -14,6 +14,7 @@ import com.bigrestaurant.system.operations.MongoOperations;
 import com.bigrestaurant.system.repositories.FacadeRepositry;
 import com.bigrestaurant.system.restaurant.modal.Restaurant;
 import com.bigrestaurant.system.services.FacadeService;
+import com.fasterxml.uuid.Generators;
 
 @Service
 public class RestaurantService implements MongoOperations<Restaurant> {
@@ -24,18 +25,31 @@ public class RestaurantService implements MongoOperations<Restaurant> {
 	@Autowired
 	private FacadeService facadeService;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Restaurant> findAll() {
-		return facadeRepositry.getRestaurantRepo().findAll();
+		List<Restaurant> restaurants = facadeRepositry.getRestaurantRepo().findAll();
+		for (Restaurant restaurant : restaurants) {
+			addDishesForRestoList(restaurant, (List<Dishes>) findAllByEmbeddedObject(restaurant.getRestName()));
+		}
+
+		return restaurants;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public <K> Restaurant findById(K object) {
 		Optional<Restaurant> restaurant = facadeRepositry.getRestaurantRepo().findById((UUID) object);
-		if (restaurant.isPresent())
-			return restaurant.get();
-
+		if (restaurant.isPresent()) {
+			Restaurant resto = restaurant.get();
+			return addDishesForRestoList(resto, ((List<Dishes>) findAllByEmbeddedObject(resto.getRestName())));
+		}
 		return null;
+	}
+
+	public Restaurant addDishesForRestoList(Restaurant restaurant, List<Dishes> dishes) {
+		restaurant.setDishes(dishes);
+		return restaurant;
 	}
 
 	@Override
@@ -46,7 +60,7 @@ public class RestaurantService implements MongoOperations<Restaurant> {
 	@Override
 	public Restaurant save(Restaurant object) {
 		if (object != null)
-			facadeRepositry.getRestaurantRepo().save(object);
+			return facadeRepositry.getRestaurantRepo().save(object);
 		return null;
 	}
 
@@ -69,18 +83,33 @@ public class RestaurantService implements MongoOperations<Restaurant> {
 		if (object.getLocation() != null)
 			restaurant.setLocation(object.getLocation());
 
-		if (object.getDishes() != null || !object.getDishes().isEmpty())
-			for (Dishes dishes : restaurant.getDishes()) {
-				for (Dishes dishes1 : object.getDishes()) {
-					if (dishes.getDishesID() != dishes1.getDishesID() || dishes.getName() != dishes1.getName()
-							|| !restaurant.getDishes().contains(dishes1))
-						restaurant.getDishes().add(dishes1);
+		if (object.getDishes() != null || !object.getDishes().isEmpty()) {
 
-					if (dishes.getDishesID() == dishes1.getDishesID() || dishes.getName() == dishes1.getName()
-							|| restaurant.getDishes().contains(dishes1))
-						facadeService.getDishesService().update(dishes, dishes.getDishesID());
+			// used just first time .
+			if (restaurant.getDishes().size() == 0) {
+				for (Dishes dishes : object.getDishes()) {
+					dishes.setDishesID(Generators.timeBasedGenerator().generate());
+					dishes.setRestaurantName(restaurant.getRestName());
+					facadeService.getDishesService().save(dishes);
 				}
 			}
+
+			for (Dishes dishes : restaurant.getDishes()) {
+				for (Dishes dishes1 : object.getDishes()) {
+					if (!dishes.getName().equals(dishes1.getName())) {
+						dishes1.setRestaurantName(restaurant.getRestName());
+						dishes1.setDishesID(Generators.timeBasedGenerator().generate());
+						facadeService.getDishesService().save(dishes1);
+					}
+
+					if (dishes.getName().equals(dishes1.getName())) {
+						facadeService.getDishesService().update(dishes1, dishes.getDishesID());
+					}
+
+				}
+			}
+
+		}
 
 		return this.save(restaurant);
 
@@ -95,6 +124,9 @@ public class RestaurantService implements MongoOperations<Restaurant> {
 		facadeService.getDishesService().delete(object);
 	}
 
+	/**
+	 * find by restaurant name from restaurant class ...
+	 **/
 	@Override
 	public <G> Restaurant findByEmbeddedObject(G m) {
 		Query query = new Query();
@@ -102,10 +134,13 @@ public class RestaurantService implements MongoOperations<Restaurant> {
 		return facadeRepositry.getMongoTemplate().findOne(query, Restaurant.class);
 	}
 
+	/**
+	 * find by all dishes of restaurant by name of resto. from dishes class ...
+	 **/
 	@Override
 	public <G> List<?> findAllByEmbeddedObject(G m) {
 		Query query = new Query();
-		query.addCriteria(Criteria.where("dishes.restaurantName").all(m));
+		query.addCriteria(Criteria.where("restaurantName").all(m));
 		return facadeRepositry.getMongoTemplate().find(query, Dishes.class);
 	}
 

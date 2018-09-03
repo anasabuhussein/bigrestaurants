@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.bigrestaurant.system.dishes.model.Orders;
 import com.bigrestaurant.system.services.FacadeService;
 
+/**
+ * Unused class! 
+ **/
 public class OrdersOfRestaurant {
 
 	@Autowired

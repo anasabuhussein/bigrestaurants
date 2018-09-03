@@ -151,7 +151,7 @@ public class Restaurant implements GeneralModel {
 		this.location = location;
 	}
 
-	public List<Dishes> getDishes() {
+	public List<Dishes> getDishes() {		
 		return dishes;
 	}
 
@@ -160,7 +160,6 @@ public class Restaurant implements GeneralModel {
 	}
 	
 	@JsonProperty("links")
-//	@JsonView(View.DishesView.class)
 	@Transient
 	@Override
 	public List<HATEOAS> getHATEOAS() {
@@ -168,10 +167,10 @@ public class Restaurant implements GeneralModel {
 		String generalPath = "/api/v1/";
 
 		// get dishes by id ...
-		links.add(new HATEOAS(generalPath + "restaurant/" + getId(), "self"));
+		links.add(new HATEOAS(generalPath + "restaurants/" + getId(), "self"));
 
 		// get dishes by name ...
-		links.add(new HATEOAS(generalPath + "restaurant/name/" + getRestName(), "self"));		
+		links.add(new HATEOAS(generalPath + "restaurants/name/" + getRestName(), "self"));		
 
 		return links;
 	}

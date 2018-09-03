@@ -73,7 +73,7 @@ public class OrdersController implements GeneralControllerPath {
 	 * @param name String
 	 * @return ResponseEntity User
 	 */
-	@GetMapping(value = "/dishes/orders/restaurant/name/{name}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
+	@GetMapping(value = "/restaurants/name/{name}/dishes/orders", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> findOredersByRestaurantName(@PathVariable("name") String name) {
 

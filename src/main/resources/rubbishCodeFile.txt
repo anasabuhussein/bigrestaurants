@@ -24,3 +24,20 @@
 	}
 	
 /**************************************/
+
+for (Dishes dishes : restaurant.getDishes()) {
+				for (Dishes dishes1 : object.getDishes()) {
+					if (dishes.getDishesID() != dishes1.getDishesID() || dishes.getName() != dishes1.getName()
+							|| !restaurant.getDishes().contains(dishes1)) {
+						dishes1.setRestaurantName(restaurant.getRestName());
+						dishes.setDishesID(Generators.timeBasedGenerator().generate());
+						facadeService.getDishesService().save(dishes1);
+					}
+
+					if (dishes.getDishesID() == dishes1.getDishesID() || dishes.getName() == dishes1.getName()
+							|| restaurant.getDishes().contains(dishes1))
+						facadeService.getDishesService().update(dishes, dishes.getDishesID());
+				}
+			}
+
+		}

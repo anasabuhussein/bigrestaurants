@@ -1,0 +1,321 @@
+[
+    {
+        "dishes": [
+            {
+                "dishesID": "519da3e3-aa3e-11e8-8389-5beaea20f085",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/519da3e3-aa3e-11e8-8389-5beaea20f085",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/519da3e3-aa3e-11e8-8389-5beaea20f085/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "e1319f69-aa3e-11e8-8389-2505a987e118",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/e1319f69-aa3e-11e8-8389-2505a987e118",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/e1319f69-aa3e-11e8-8389-2505a987e118/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "14494ddd-aa3f-11e8-8389-8b0d0463ba8f",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/14494ddd-aa3f-11e8-8389-8b0d0463ba8f",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/14494ddd-aa3f-11e8-8389-8b0d0463ba8f/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "0e922de5-aa40-11e8-b6a0-a715a75d8217",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/0e922de5-aa40-11e8-b6a0-a715a75d8217",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/0e922de5-aa40-11e8-b6a0-a715a75d8217/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "5bf100cc-aa40-11e8-b6a0-b5bcb821e874",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/5bf100cc-aa40-11e8-b6a0-b5bcb821e874",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/5bf100cc-aa40-11e8-b6a0-b5bcb821e874/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "a6361100-aa40-11e8-98c2-155356afd95e",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/a6361100-aa40-11e8-98c2-155356afd95e",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/a6361100-aa40-11e8-98c2-155356afd95e/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "17b7607b-aa41-11e8-bb6d-cfdbf4249a61",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/17b7607b-aa41-11e8-bb6d-cfdbf4249a61",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/17b7607b-aa41-11e8-bb6d-cfdbf4249a61/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "4b9ee20f-aa41-11e8-bb6d-05335a72a097",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/4b9ee20f-aa41-11e8-bb6d-05335a72a097",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/4b9ee20f-aa41-11e8-bb6d-05335a72a097/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "c8fd75ad-aa41-11e8-8c20-bd97ecb054d0",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/c8fd75ad-aa41-11e8-8c20-bd97ecb054d0",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/c8fd75ad-aa41-11e8-8c20-bd97ecb054d0/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "eefe76b3-aa41-11e8-8c20-a1ac80ae0135",
+                "dishesName": "salt",
+                "pic": "15.png",
+                "availableDelivery": false,
+                "price": 0,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "restMan",
+                    "dan"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/eefe76b3-aa41-11e8-8c20-a1ac80ae0135",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/salt",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/eefe76b3-aa41-11e8-8c20-a1ac80ae0135/comments",
+                        "rel": "comments"
+                    }
+                ]
+            },
+            {
+                "dishesID": "7eb1b59b-abc6-11e8-a9ef-af1ddc2479d8",
+                "dishesName": "70",
+                "pic": "lala.png",
+                "availableDelivery": false,
+                "price": 15.05,
+                "restaurantName": "sultan",
+                "mainComponents": [
+                    "sasa",
+                    "dada"
+                ],
+                "countOfComments": 0,
+                "links": [
+                    {
+                        "href": "/api/v1/dishes/7eb1b59b-abc6-11e8-a9ef-af1ddc2479d8",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/name/70",
+                        "rel": "self"
+                    },
+                    {
+                        "href": "/api/v1/dishes/7eb1b59b-abc6-11e8-a9ef-af1ddc2479d8/comments",
+                        "rel": "comments"
+                    }
+                ]
+            }
+        ],
+        "location": {
+            "x": 0,
+            "y": 0
+        },
+        "id": "44f0d3aa-aa4c-11e8-b904-c521a78a7d4a",
+        "restName": "sultan",
+        "country": "jordan",
+        "city": "amman",
+        "links": [
+            {
+                "href": "/api/v1/restaurants/44f0d3aa-aa4c-11e8-b904-c521a78a7d4a",
+                "rel": "self"
+            },
+            {
+                "href": "/api/v1/restaurants/name/sultan",
+                "rel": "self"
+            }
+        ]
+    }
+]

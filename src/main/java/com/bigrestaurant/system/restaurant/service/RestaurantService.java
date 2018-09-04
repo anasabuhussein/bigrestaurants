@@ -9,9 +9,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import com.bigrestaurant.system.dishes.model.Dishes;
 import com.bigrestaurant.system.operations.MongoOperations;
 import com.bigrestaurant.system.repositories.FacadeRepositry;
+import com.bigrestaurant.system.restaurant.dishes.model.Dishes;
 import com.bigrestaurant.system.restaurant.modal.Restaurant;
 import com.bigrestaurant.system.services.FacadeService;
 import com.fasterxml.uuid.Generators;

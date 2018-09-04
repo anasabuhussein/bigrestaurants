@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bigrestaurant.system.dishes.controller.GeneralControllerPath;
-import com.bigrestaurant.system.dishes.model.Dishes;
-import com.bigrestaurant.system.dishes.model.server.message.ServerExciption;
-import com.bigrestaurant.system.dishes.model.server.message.ServerMessage;
+import com.bigrestaurant.system.restaurant.dishes.controller.GeneralControllerPath;
+import com.bigrestaurant.system.restaurant.dishes.model.Dishes;
+import com.bigrestaurant.system.restaurant.dishes.model.server.message.ServerExciption;
+import com.bigrestaurant.system.restaurant.dishes.model.server.message.ServerMessage;
 import com.bigrestaurant.system.restaurant.modal.Restaurant;
 import com.bigrestaurant.system.services.FacadeService;
 

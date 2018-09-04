@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.bigrestaurant.system.dishes.controller.GeneralControllerPath;
-import com.bigrestaurant.system.dishes.model.server.message.ServerMessage;
 import com.bigrestaurant.system.mall.model.Mall;
+import com.bigrestaurant.system.restaurant.dishes.controller.GeneralControllerPath;
+import com.bigrestaurant.system.restaurant.dishes.model.server.message.ServerMessage;
 import com.bigrestaurant.system.services.FacadeService;
 
 public class MallController implements GeneralControllerPath {

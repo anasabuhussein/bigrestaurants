@@ -30,7 +30,7 @@ public interface MongoOperations<T> {
 	 * Get specific object
 	 * 
 	 * @return Object
-	 * @see com.RestaurantOrders.restaurant.model.Orders
+	 * @see com.bigrestaurant.system.restaurant.modal.RestaurantOrders.restaurant.model.Orders
 	 * @see com.api.restaurant.model.Comments
 	 * @see com.api.restaurant.model.User
 	 * @see com.api.restaurant.model.Dishes
@@ -64,7 +64,7 @@ public interface MongoOperations<T> {
 	 * Get specific embedded object
 	 * 
 	 * @return Object inside model.*
-	 * @see com.RestaurantOrders.restaurant.model.Orders
+	 * @see com.bigrestaurant.system.restaurant.modal.RestaurantOrders.restaurant.model.Orders
 	 * @see com.api.restaurant.model.Comments
 	 * @see com.api.restaurant.model.User
 	 * @see com.api.restaurant.model.Dishes
@@ -77,7 +77,7 @@ public interface MongoOperations<T> {
 	 * Get all by specific embedded object
 	 * 
 	 * @return Object inside model.*
-	 * @see com.RestaurantOrders.restaurant.model.Orders
+	 * @see com.bigrestaurant.system.restaurant.modal.RestaurantOrders.restaurant.model.Orders
 	 * @see com.api.restaurant.model.Comments
 	 * @see com.api.restaurant.model.User
 	 * @see com.api.restaurant.model.Dishes

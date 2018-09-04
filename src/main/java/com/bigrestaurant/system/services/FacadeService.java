@@ -3,10 +3,10 @@ package com.bigrestaurant.system.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bigrestaurant.system.dishes.service.DishesService;
-import com.bigrestaurant.system.dishes.service.OredreService;
-import com.bigrestaurant.system.dishes.service.UserService;
 import com.bigrestaurant.system.mall.services.MallService;
+import com.bigrestaurant.system.restaurant.dishes.service.DishesService;
+import com.bigrestaurant.system.restaurant.dishes.service.UserService;
+import com.bigrestaurant.system.restaurant.service.RestaurantOredreService;
 import com.bigrestaurant.system.restaurant.service.RestaurantService;
 
 /**
@@ -23,7 +23,7 @@ public class FacadeService {
 	private DishesService dishesService;
 
 	@Autowired
-	private OredreService oredreService;
+	private RestaurantOredreService oredreService;
 
 	@Autowired
 	private UserService userService;
@@ -42,7 +42,7 @@ public class FacadeService {
 		return dishesService;
 	}
 
-	public OredreService getOredreService() {
+	public RestaurantOredreService getOredreService() {
 		return oredreService;
 	}
 

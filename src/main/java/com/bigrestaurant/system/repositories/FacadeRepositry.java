@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
-import com.bigrestaurant.system.dishes.repo.DeliverManRepo;
-import com.bigrestaurant.system.dishes.repo.DishesRepo;
-import com.bigrestaurant.system.dishes.repo.ImpSpicealMongoRepositoryOperations;
-import com.bigrestaurant.system.dishes.repo.OrdersRepo;
-import com.bigrestaurant.system.dishes.repo.UserRepo;
 import com.bigrestaurant.system.mall.repositry.MallRepo;
+import com.bigrestaurant.system.restaurant.dishes.repo.DeliverManRepo;
+import com.bigrestaurant.system.restaurant.dishes.repo.DishesRepo;
+import com.bigrestaurant.system.restaurant.dishes.repo.ImpSpicealMongoRepositoryOperations;
+import com.bigrestaurant.system.restaurant.dishes.repo.UserRepo;
+import com.bigrestaurant.system.restaurant.repo.RestaurantOrdersRepo;
 import com.bigrestaurant.system.restaurant.repo.RestaurantRepo;
 
 /**
@@ -36,7 +36,7 @@ public class FacadeRepositry {
 	private DishesRepo dishesRepo;
 
 	@Autowired
-	private OrdersRepo ordersOfDishesRepo;
+	private RestaurantOrdersRepo ordersOfDishesRepo;
 
 	@Autowired
 	private RestaurantRepo restaurantRepo;
@@ -67,7 +67,7 @@ public class FacadeRepositry {
 		return dishesRepo;
 	}
 
-	public OrdersRepo getOrdersOfDishesRepo() {
+	public RestaurantOrdersRepo getOrdersOfDishesRepo() {
 		return ordersOfDishesRepo;
 	}
 

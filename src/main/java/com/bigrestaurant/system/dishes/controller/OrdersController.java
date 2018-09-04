@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bigrestaurant.system.dishes.model.Orders;
+import com.bigrestaurant.system.dishes.model.RestaurantOrders;
 import com.bigrestaurant.system.dishes.model.server.message.ServerMessage;
 import com.bigrestaurant.system.services.FacadeService;
 
@@ -44,7 +44,7 @@ public class OrdersController implements GeneralControllerPath {
 	 */
 	@GetMapping(value = "/dishes/orders", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<List<Orders>> findAllOrdersOfDishes() {
+	public ResponseEntity<List<RestaurantOrders>> findAllOrdersOfDishes() {
 		return new ResponseEntity<>(facadeService.getOredreService().findAll(), HttpStatus.OK);
 	}
 
@@ -58,7 +58,7 @@ public class OrdersController implements GeneralControllerPath {
 	@GetMapping(value = "/dishes/orders/{id}", produces = { MediaType.APPLICATION_JSON_UTF8_VALUE,
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> findOrdersOfDishesByID(@PathVariable("id") UUID id) {
-		Orders orders = facadeService.getOredreService().findById(id);
+		RestaurantOrders orders = facadeService.getOredreService().findById(id);
 		if (orders != null)
 			return new ResponseEntity<>(orders, HttpStatus.OK);
 
@@ -77,7 +77,7 @@ public class OrdersController implements GeneralControllerPath {
 			MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<?> findOredersByRestaurantName(@PathVariable("name") String name) {
 
-		List<Orders> orders = facadeService.getOredreService().findAllByEmbeddedObject(name);
+		List<RestaurantOrders> orders = facadeService.getOredreService().findAllByEmbeddedObject(name);
 		if (orders != null)
 			if (!orders.isEmpty())
 				return new ResponseEntity<>(orders, HttpStatus.OK);
@@ -98,7 +98,7 @@ public class OrdersController implements GeneralControllerPath {
 	@PostMapping(value = { "/dishes/orders", "/dishes/orders/restaurant/name/{name}" }, produces = {
 			MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = {
 					MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<?> setNewOrders(@RequestBody Orders orders, @PathVariable("name") String name) {
+	public ResponseEntity<?> setNewOrders(@RequestBody RestaurantOrders orders, @PathVariable("name") String name) {
 		try {
 
 			// for restaurant name.
@@ -130,7 +130,7 @@ public class OrdersController implements GeneralControllerPath {
 	@PutMapping(value = { "/dishes/orders/{id}", "/dishes/orders/restaurant/name/{name}" }, produces = {
 			MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = {
 					MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE })
-	public ResponseEntity<?> updateOrders(@RequestBody Orders orders, @PathVariable("name") String name,
+	public ResponseEntity<?> updateOrders(@RequestBody RestaurantOrders orders, @PathVariable("name") String name,
 			@PathVariable("id") UUID id) {
 		try {
 
@@ -156,7 +156,7 @@ public class OrdersController implements GeneralControllerPath {
 	public ResponseEntity<?> deleteOrdersByID(@PathVariable("name") String name, @PathVariable("id") UUID id) {
 		try {
 
-			Orders orders = facadeService.getOredreService().findById(id);
+			RestaurantOrders orders = facadeService.getOredreService().findById(id);
 
 			if (orders != null)
 				facadeService.getOredreService().delete(orders);

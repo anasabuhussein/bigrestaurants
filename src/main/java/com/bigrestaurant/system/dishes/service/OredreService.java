@@ -17,27 +17,27 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.dishes.model.Dishes;
-import com.bigrestaurant.system.dishes.model.OrderDate;
-import com.bigrestaurant.system.dishes.model.Orders;
+import com.bigrestaurant.system.dishes.model.RestaurantOrders;
+import com.bigrestaurant.system.model.OrderDate;
 import com.bigrestaurant.system.operations.MongoOperations;
 import com.bigrestaurant.system.repositories.FacadeRepositry;
 import com.bigrestaurant.system.restaurant.modal.Restaurant;
 
 @Service
 @Order(3)
-public class OredreService implements CommandLineRunner, MongoOperations<Orders> {
+public class OredreService implements CommandLineRunner, MongoOperations<RestaurantOrders> {
 
 	@Autowired
 	private FacadeRepositry facadeRepositry;
 
 	@Override
-	public List<Orders> findAll() {
+	public List<RestaurantOrders> findAll() {
 		return facadeRepositry.getOrdersOfDishesRepo().findAll();
 	}
 
 	@Override
-	public <K> Orders findById(K object) {
-		Optional<Orders> orders = facadeRepositry.getOrdersOfDishesRepo().findById((UUID) object);
+	public <K> RestaurantOrders findById(K object) {
+		Optional<RestaurantOrders> orders = facadeRepositry.getOrdersOfDishesRepo().findById((UUID) object);
 		if (orders.isPresent())
 			return orders.get();
 
@@ -45,16 +45,16 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 	}
 
 	@Override
-	public Orders findByObject(Orders object) {
+	public RestaurantOrders findByObject(RestaurantOrders object) {
 		return null;
 	}
 
 	@Override
-	public Orders save(Orders object) {
+	public RestaurantOrders save(RestaurantOrders object) {
 		return facadeRepositry.getOrdersOfDishesRepo().save(object);
 	}
 
-	public Orders saveWithName(Orders object, String name) {
+	public RestaurantOrders saveWithName(RestaurantOrders object, String name) {
 		if (name != null)
 			for (Dishes dishes : object.getDishes()) {
 				dishes.setRestaurantName(name);
@@ -63,9 +63,9 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 	}
 
 	@Override
-	public <G> Orders update(Orders object, G g) {
+	public <G> RestaurantOrders update(RestaurantOrders object, G g) {
 
-		Orders orders = this.findById(g);
+		RestaurantOrders orders = this.findById(g);
 
 		if (object.getUser() != null)
 			orders.setUser(object.getUser());
@@ -92,31 +92,31 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 	}
 
 	@Override
-	public void delete(Orders object) {
+	public void delete(RestaurantOrders object) {
 		facadeRepositry.getOrdersOfDishesRepo().delete(object);
 	}
 
 	@Override
-	public <G> Orders findByEmbeddedObject(G m) {
+	public <G> RestaurantOrders findByEmbeddedObject(G m) {
 		return null;
 	}
 
 	@Override
-	public <G> List<Orders> findAllByEmbeddedObject(G name) {
+	public <G> List<RestaurantOrders> findAllByEmbeddedObject(G name) {
 
 		// get restaurant from database by name.
 		Restaurant restaurant = facadeRepositry.getRestaurantRepo().findByRestName((String) name);
 		if (restaurant != null) {
 			Query query = new Query();
 			query.addCriteria(Criteria.where("dishes.restaurantName").all(restaurant.getRestName()));
-			return facadeRepositry.getMongoTemplate().find(query, Orders.class);
+			return facadeRepositry.getMongoTemplate().find(query, RestaurantOrders.class);
 		}
 
 		return null;
 	}
 
 	@Override
-	public boolean iterator(Orders t) {
+	public boolean iterator(RestaurantOrders t) {
 		return false;
 	}
 
@@ -134,17 +134,17 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 
 	public class SchedualedDeleteOrdersWeeklyRunnable implements Runnable {
 
-		private List<Orders> ordersList;
+		private List<RestaurantOrders> ordersList;
 
-		public SchedualedDeleteOrdersWeeklyRunnable(List<Orders> orders) {
+		public SchedualedDeleteOrdersWeeklyRunnable(List<RestaurantOrders> orders) {
 			this.ordersList = orders;
 		}
 
 		@Override
 		public void run() {
 			// check all date for all orders
-			Orders orders = null;
-			List<Orders> ordersInWeekDate = new ArrayList<>();
+			RestaurantOrders orders = null;
+			List<RestaurantOrders> ordersInWeekDate = new ArrayList<>();
 
 			for (int i = 0; i < ordersList.size(); i++) {
 				orders = ordersList.get(i);
@@ -155,7 +155,7 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 
 		}
 
-		public void cachOrderDateAndMakeCompearsion(Orders orders, List<Orders> ordersInWeekDate) {
+		public void cachOrderDateAndMakeCompearsion(RestaurantOrders orders, List<RestaurantOrders> ordersInWeekDate) {
 			// for date
 			OrderDate orderDate = orders.getDate();
 			LocalDate dateOfOrder = LocalDate.parse(orderDate.getHistory());
@@ -168,8 +168,8 @@ public class OredreService implements CommandLineRunner, MongoOperations<Orders>
 		}
 
 		// for delete orders in list added
-		public void deleteOrdersListForLastWeek(List<Orders> orders) {
-			for (Orders object : orders)
+		public void deleteOrdersListForLastWeek(List<RestaurantOrders> orders) {
+			for (RestaurantOrders object : orders)
 				OredreService.this.delete(object);
 		}
 	}

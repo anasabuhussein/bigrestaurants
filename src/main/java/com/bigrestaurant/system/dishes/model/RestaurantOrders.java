@@ -17,6 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.bigrestaurant.system.model.GeneralModel;
 import com.bigrestaurant.system.model.HATEOAS;
+import com.bigrestaurant.system.model.OrderDate;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -47,7 +48,7 @@ import com.fasterxml.uuid.Generators;
 
 @Document(collection = "orders")
 @JsonInclude(Include.NON_EMPTY)
-public class Orders implements GeneralModel {
+public class RestaurantOrders implements GeneralModel {
 
 	@Id
 	private final UUID id;
@@ -83,7 +84,7 @@ public class Orders implements GeneralModel {
 	private OrderDate date;
 
 	@PersistenceConstructor
-	public Orders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes) {
+	public RestaurantOrders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes) {
 		super();
 		this.id = Generators.timeBasedGenerator().generate();
 		this.user = user;
@@ -93,7 +94,7 @@ public class Orders implements GeneralModel {
 	}
 
 	@PersistenceConstructor
-	public Orders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes, @Max(10) @Min(0) long userRating) {
+	public RestaurantOrders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes, @Max(10) @Min(0) long userRating) {
 		super();
 		this.id = Generators.timeBasedGenerator().generate();
 		this.user = user;
@@ -103,7 +104,7 @@ public class Orders implements GeneralModel {
 		date = OrderDate.orderDate();
 	}
 
-	public Orders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes, @Max(10) @Min(0) long userRating,
+	public RestaurantOrders(@NotNull User user, @NotNull @NotEmpty Set<Dishes> dishes, @Max(10) @Min(0) long userRating,
 			boolean approval, boolean delever) {
 		super();
 		this.id = Generators.timeBasedGenerator().generate();

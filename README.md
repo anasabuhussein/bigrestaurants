@@ -96,6 +96,15 @@ and add it to project and endpoints.
 	    * /api/v1/restaurants/{id}
 	    * /restaurants/{id}/dishes/{dishesid}
 	    
+	 * Malls 
+	 	* Malls : GET
+	 	  * /api/v1/malls
+	 	  * /api/v1/malls/{id}
+	 	* Malls : POST
+	 	  * /api/v1/malls
+	 	* Malls : PUT, DELETE
+	 	  * /api/v1/malls/{id}
+	    
 	    
 ### Pic
 > For all images please visit below imgur links,  

@@ -9,6 +9,7 @@ import com.bigrestaurant.system.dishes.repo.DishesRepo;
 import com.bigrestaurant.system.dishes.repo.ImpSpicealMongoRepositoryOperations;
 import com.bigrestaurant.system.dishes.repo.OrdersRepo;
 import com.bigrestaurant.system.dishes.repo.UserRepo;
+import com.bigrestaurant.system.mall.repositry.MallRepo;
 import com.bigrestaurant.system.restaurant.repo.RestaurantRepo;
 
 /**
@@ -41,6 +42,9 @@ public class FacadeRepositry {
 	private RestaurantRepo restaurantRepo;
 
 	@Autowired
+	private MallRepo mallRepo;
+
+	@Autowired
 	private ImpSpicealMongoRepositoryOperations<?> ismro;
 
 	public FacadeRepositry() {
@@ -69,6 +73,10 @@ public class FacadeRepositry {
 
 	public RestaurantRepo getRestaurantRepo() {
 		return restaurantRepo;
+	}
+
+	public MallRepo getMallRepo() {
+		return mallRepo;
 	}
 
 	public ImpSpicealMongoRepositoryOperations<?> getIsmro() {

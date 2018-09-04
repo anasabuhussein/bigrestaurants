@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.bigrestaurant.system.dishes.service.DishesService;
 import com.bigrestaurant.system.dishes.service.OredreService;
 import com.bigrestaurant.system.dishes.service.UserService;
+import com.bigrestaurant.system.mall.services.MallService;
 import com.bigrestaurant.system.restaurant.service.RestaurantService;
 
 /**
@@ -30,6 +31,9 @@ public class FacadeService {
 	@Autowired
 	private RestaurantService restaurantService;
 
+	@Autowired
+	private MallService mallService;
+
 	public FacadeService() {
 		super();
 	}
@@ -48,6 +52,10 @@ public class FacadeService {
 
 	public RestaurantService getRestaurantService() {
 		return restaurantService;
+	}
+
+	public MallService getMallService() {
+		return mallService;
 	}
 
 }

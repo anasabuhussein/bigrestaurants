@@ -1,5 +1,7 @@
 package com.bigrestaurant.system.mall.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import javax.validation.constraints.NotEmpty;
@@ -7,17 +9,22 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.bigrestaurant.system.model.Coordinates;
+import com.bigrestaurant.system.model.GeneralModel;
+import com.bigrestaurant.system.model.HATEOAS;
+import com.bigrestaurant.system.view.View;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.uuid.Generators;
 
 @Document(collection = "malls")
-public class Mall {
+public class Mall implements GeneralModel {
 
 	@Id
 	@JsonProperty("id")
@@ -106,6 +113,22 @@ public class Mall {
 
 	public void setLocations(Coordinates locations) {
 		this.locations = locations;
+	}
+
+	@JsonProperty("links")
+	@Transient
+	@Override
+	public List<HATEOAS> getHATEOAS() {
+		List<HATEOAS> links = new ArrayList<>();
+		String generalPath = "/api/v1/";
+
+		// get dishes by id ...
+		links.add(new HATEOAS(generalPath + "malls", "self"));
+
+		// get dishes by name ...
+		links.add(new HATEOAS(generalPath + "malls/{id}/" + getId(), "self"));
+
+		return links;
 	}
 
 }

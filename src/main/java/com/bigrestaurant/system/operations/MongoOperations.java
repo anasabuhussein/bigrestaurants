@@ -51,7 +51,7 @@ public interface MongoOperations<T> {
 	 * 
 	 * @param object
 	 **/
-	public <G> T update(T object, G g );
+	public <G> T update(T object, G g);
 
 	/**
 	 * delete object
@@ -71,7 +71,7 @@ public interface MongoOperations<T> {
 	 * @see com.api.restaurant.model.DeliverMan
 	 * 
 	 **/
-	public<G> T findByEmbeddedObject(G m);
+	public <G> T findByEmbeddedObject(G m);
 
 	/**
 	 * Get all by specific embedded object
@@ -85,7 +85,11 @@ public interface MongoOperations<T> {
 	 * 
 	 **/
 	public <G> List<?> findAllByEmbeddedObject(G m);
-	
-	public boolean iterator(T t) ;
-	
+
+	public boolean iterator(T t);
+
+	public interface MoreOperations {
+		public <T> T nearQuery();
+	}
+
 }

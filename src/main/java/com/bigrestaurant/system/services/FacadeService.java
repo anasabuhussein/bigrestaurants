@@ -3,6 +3,7 @@ package com.bigrestaurant.system.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bigrestaurant.system.mall.services.MallOrdersService;
 import com.bigrestaurant.system.mall.services.MallService;
 import com.bigrestaurant.system.restaurant.dishes.service.DishesService;
 import com.bigrestaurant.system.restaurant.dishes.service.UserService;
@@ -34,6 +35,9 @@ public class FacadeService {
 	@Autowired
 	private MallService mallService;
 
+	@Autowired
+	private MallOrdersService mallOrdersService;
+
 	public FacadeService() {
 		super();
 	}
@@ -56,6 +60,10 @@ public class FacadeService {
 
 	public MallService getMallService() {
 		return mallService;
+	}
+
+	public MallOrdersService getMallOrdersService() {
+		return mallOrdersService;
 	}
 
 }

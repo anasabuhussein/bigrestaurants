@@ -5,11 +5,13 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bigrestaurant.system.mall.model.Mall;
 import com.bigrestaurant.system.operations.MongoOperations;
 import com.bigrestaurant.system.repositories.FacadeRepositry;
 
+@Service
 public class MallService implements MongoOperations<Mall> {
 
 	@Autowired

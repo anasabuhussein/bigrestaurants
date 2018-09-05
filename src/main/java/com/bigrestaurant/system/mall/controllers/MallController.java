@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.bigrestaurant.system.mall.model.Mall;
 import com.bigrestaurant.system.restaurant.dishes.controller.GeneralControllerPath;
 import com.bigrestaurant.system.restaurant.dishes.model.server.message.ServerMessage;
 import com.bigrestaurant.system.services.FacadeService;
 
+@RestController
 public class MallController implements GeneralControllerPath {
 
 	@Autowired

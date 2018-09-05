@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
+import com.bigrestaurant.system.mall.repositry.MallOrdersRepo;
 import com.bigrestaurant.system.mall.repositry.MallRepo;
 import com.bigrestaurant.system.restaurant.dishes.repo.DeliverManRepo;
 import com.bigrestaurant.system.restaurant.dishes.repo.DishesRepo;
@@ -45,6 +46,9 @@ public class FacadeRepositry {
 	private MallRepo mallRepo;
 
 	@Autowired
+	private MallOrdersRepo mallOrdersRepo;
+
+	@Autowired
 	private ImpSpicealMongoRepositoryOperations<?> ismro;
 
 	public FacadeRepositry() {
@@ -77,6 +81,10 @@ public class FacadeRepositry {
 
 	public MallRepo getMallRepo() {
 		return mallRepo;
+	}
+
+	public MallOrdersRepo getMallOrdersRepo() {
+		return mallOrdersRepo;
 	}
 
 	public ImpSpicealMongoRepositoryOperations<?> getIsmro() {

@@ -41,3 +41,30 @@ for (Dishes dishes : restaurant.getDishes()) {
 			}
 
 		}
+		
+*********************************
+
+for mall service ...
+
+@Override
+	public void run(String... args) throws Exception {
+
+		Mall mm = new Mall("anas", "amman", "jordan", null);
+		this.save(mm);
+	}
+	
+*********************************
+for mall orders service 
+
+@Override
+	public void run(String... args) throws Exception {
+
+		List<String> ll = new ArrayList<>();
+		ll.add("test1 ");
+		ll.add("test1 ");
+		ll.add("test1 ");
+		ll.add("test1 ");
+		MallOrders mo = new MallOrders(new User("55", "anas", "pic", "test@me.com", "35454", 0, null), "anas", ll);
+
+		this.save(mo);
+	}

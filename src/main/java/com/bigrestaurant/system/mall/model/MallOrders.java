@@ -29,6 +29,9 @@ public class MallOrders {
 	@JsonProperty("mallName")
 	private String mallName;
 
+	@JsonProperty("mallID")
+	private UUID mallID;
+
 	@JsonProperty("orderDate")
 	private OrderDate orderDate;
 
@@ -39,14 +42,18 @@ public class MallOrders {
 		super();
 		if (this.id == null)
 			this.id = Generators.timeBasedGenerator().generate();
+
+		if (this.orderDate == null)
+			this.orderDate = OrderDate.orderDate();
 	}
 
 	@PersistenceConstructor
-	public MallOrders(@NotNull User user, String mallName, List<String> ingredientsOFDishes) {
+	public MallOrders(@NotNull User user, String mallName, UUID mallID, List<String> ingredientsOFDishes) {
 		super();
 		this.id = Generators.timeBasedGenerator().generate();
 		this.user = user;
 		this.mallName = mallName;
+		this.mallID = mallID;
 		this.orderDate = OrderDate.orderDate();
 		this.ingredientsOFDishes = ingredientsOFDishes;
 	}
@@ -73,6 +80,14 @@ public class MallOrders {
 
 	public void setMallName(String mallName) {
 		this.mallName = mallName;
+	}
+
+	public UUID getMallID() {
+		return mallID;
+	}
+
+	public void setMallID(UUID mallID) {
+		this.mallID = mallID;
 	}
 
 	public OrderDate getOrderDate() {

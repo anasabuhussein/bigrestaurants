@@ -1,0 +1,39 @@
+[
+    {
+        "mallOrderID": "9c40288a-b0cb-11e8-b370-f1df923fe2ce",
+        "user": {
+            "userID": "55",
+            "userName": "anas",
+            "userMail": "test@me.com",
+            "userPhone": "35454",
+            "userPic": "pic",
+            "table": 0,
+            "location": {
+                "x": 35.945,
+                "y": 31.9552
+            },
+            "links": [
+                {
+                    "href": "/api/v1/users/55",
+                    "rel": "self"
+                },
+                {
+                    "href": "/api/v1/users/name/anas",
+                    "rel": "self"
+                }
+            ]
+        },
+        "mallName": "anas",
+        "mallID": "6b6f835b-b0cb-11e8-b8c1-835ac93cfa12",
+        "orderDate": {
+            "history": "2018-09-05",
+            "oclock": "08:21:58.110"
+        },
+        "ingredientsOFDishes": [
+            "test1 ",
+            "test1 ",
+            "test1 ",
+            "test1 "
+        ]
+    }
+]

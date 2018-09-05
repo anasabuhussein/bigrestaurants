@@ -89,7 +89,8 @@ public interface MongoOperations<T> {
 	public boolean iterator(T t);
 
 	public interface MoreOperations {
-		public <T> T nearQuery();
+		public <T, G> List<T> nearQuery(double max, G g);
+
 	}
 
 }

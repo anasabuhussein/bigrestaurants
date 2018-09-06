@@ -112,10 +112,11 @@ and add it to project and endpoints.
 > For all images please visit below imgur links,  
 **[imgur](https://imgur.com/a/AiVHJrW)**
 
- ### License & Copyright
- @Anas Abu-Hussein
- 
- Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE)
-	    
 ### Auther 
 > ** - Anas Abu Hussein : Fullstack Developer **
+
+### License & Copyright
+@Anas Abu-Hussein,
+Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE).
+This project is licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE) - see the LICENSE file for details.
+	   

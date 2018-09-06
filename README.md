@@ -115,7 +115,7 @@ and add it to project and endpoints.
  ### License & Copyright
  @Anas Abu-Hussein
  
- Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/Zone-Api/blob/master/LICENSE)
+ Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE)
 	    
 ### Auther 
 > ** - Anas Abu Hussein : Fullstack Developer **

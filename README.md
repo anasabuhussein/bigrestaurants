@@ -18,6 +18,8 @@ It is provide food services for many things like restaurants and mall and dishes
 
 - [Auther](https://github.com/anasabuhussein/bigrestaurants#auther)
 
+- [License & Copyright](https://github.com/anasabuhussein/bigrestaurants#license--copyright)
+
 ### Description
 >This project provide api service (Json and xml) for multi restaurants want to show them dishes and users orders this dishes; can user orders (Ingredients of the dish) from malls; The user can orders the (ingredients of the dish) from mall; the project provide location of user; the project shall provide follow path of delivery man.
 
@@ -110,6 +112,10 @@ and add it to project and endpoints.
 > For all images please visit below imgur links,  
 **[imgur](https://imgur.com/a/AiVHJrW)**
 
+ ### License & Copyright
+ @Anas Abu-Hussein
+ 
+ Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/Zone-Api/blob/master/LICENSE)
 	    
 ### Auther 
 > ** - Anas Abu Hussein : Fullstack Developer **

@@ -116,7 +116,6 @@ and add it to project and endpoints.
 > ** - Anas Abu Hussein : Fullstack Developer **
 
 ### License & Copyright
-@Anas Abu-Hussein,
-Licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE).
+> @Anas Abu-Hussein
 This project is licensed under the [Apache License 2.0](https://github.com/anasabuhussein/bigrestaurants/blob/master/LICENSE) - see the LICENSE file for details.
 	   
